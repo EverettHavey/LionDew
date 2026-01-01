@@ -3,53 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LionDew | Unleash Your Inner King</title>
+    <title>LionDew | Homepage</title>
     <style>
-        :root {
-            --primary: #00a86b;
-            --secondary: #f4a261;
-            --dark: #1a1a1a;
-            --light: #f4f4f4;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--light); color: var(--dark); line-height: 1.6; }
+        :root { --primary: #00a86b; --gold: #f4a261; --dark: #121212; --light: #f4f4f4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+        body { background: var(--light); color: var(--dark); overflow-x: hidden; }
         
-        /* Navigation */
-        nav { background: var(--dark); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        nav { background: var(--dark); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); letter-spacing: 2px; }
         .nav-links { display: flex; list-style: none; }
-        .nav-links li { margin-left: 20px; }
-        .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
-        .nav-links a:hover { color: var(--secondary); }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
         
-        /* Hamburger */
         .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .hamburger span { width: 25px; height: 3px; background: white; }
+        .hamburger span { width: 25px; height: 3px; background: white; transition: 0.3s; }
 
-        /* Hero Section */
         .hero { 
-            height: 80vh; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover; background-position: center;
-            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px;
+            height: 90vh; 
+            display: flex; align-items: center; justify-content: center; 
+            background: linear-gradient(135deg, #004d31 0%, #121212 100%);
+            color: white; padding: 0 5%; flex-wrap: wrap;
         }
-        .hero h1 { font-size: 4rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px; }
-        .btn { background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: var(--secondary); transform: scale(1.05); }
+        .hero-text { flex: 1; min-width: 300px; text-align: left; }
+        .hero-text h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-img { flex: 1; min-width: 300px; display: flex; justify-content: center; }
+        .hero-img img { max-width: 400px; width: 100%; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); }
+        .btn { background: var(--primary); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; }
+        .btn:hover { background: var(--gold); transform: translateY(-3px); }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; right: 0; background: var(--dark); width: 100%; text-align: center; padding: 20px 0; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--dark); padding: 20px; }
             .nav-links.active { display: flex; }
             .nav-links li { margin: 15px 0; }
             .hamburger { display: flex; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero { text-align: center; padding-top: 50px; }
+            .hero-text h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">LIONDEW</div>
-        <ul class="nav-links" id="nav-links">
+        <ul class="nav-links" id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="brands.html">Brands</a></li>
             <li><a href="shop.html">Shop</a></li>
@@ -57,21 +53,20 @@
             <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" onclick="document.getElementById('menu').classList.toggle('active')">
             <span></span><span></span><span></span>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>Unleash Your Inner King</h1>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem;">The boldest refreshment on the planet.</p>
-        <a href="shop.html" class="btn">Shop LionDew Now</a>
-    </header>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('nav-links').classList.toggle('active');
-        }
-    </script>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>UNLEASH<br>YOUR INNER<br><span style="color:var(--gold)">KING.</span></h1>
+            <p style="margin-bottom: 30px; font-size: 1.2rem;">Bold flavor. Pure energy. The apex of refreshment.</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+        <div class="hero-img">
+            <img src="images/drink.webp" alt="LionDew Original">
+        </div>
+    </section>
 </body>
 </html>
