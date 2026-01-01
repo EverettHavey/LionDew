@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | LionDew</title>
+    <style>
+        :root { --primary: #00a86b; --secondary: #f4a261; --dark: #1a1a1a; --light: #f4f4f4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        nav { background: var(--dark); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; }
+        
+        .container { padding: 50px 20px; max-width: 600px; margin: auto; text-align: center; }
+        form { background: white; padding: 30px; border-radius: 10px; text-align: left; }
+        .group { margin-bottom: 20px; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        #thank-you { display: none; background: white; padding: 50px; border-radius: 10px; }
+        .btn { background: var(--primary); color: white; padding: 15px; width: 100%; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LIONDEW</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="application-form">
+            <h2>Join the LionDew Pride</h2>
+            <p style="margin-bottom: 30px;">We're looking for fierce talent.</p>
+            <form id="careerForm">
+                <div class="group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="group">
+                    <label>Position</label>
+                    <select>
+                        <option>Brand Ambassador</option>
+                        <option>Production Manager</option>
+                        <option>Social Media Strategist</option>
+                        <option>Logistics Lead</option>
+                    </select>
+                </div>
+                <div class="group">
+                    <label>Resume Link (LinkedIn/Drive)</label>
+                    <input type="url" placeholder="https://..." required>
+                </div>
+                <button type="button" class="btn" onclick="submitApp()">Submit Application</button>
+            </form>
+        </div>
+
+        <div id="thank-you">
+            <h1 style="color: var(--primary);">Roar!</h1>
+            <p>Thank you for applying. Our scouts will review your application soon.</p>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">Use the menu above to return to the site.</p>
+        </div>
+    </div>
+
+    <script>
+        function submitApp() {
+            document.getElementById('application-form').style.display = 'none';
+            document.getElementById('thank-you').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Brands | LionDew</title>
+    <style>
+        /* Shared Styles */
+        :root { --primary: #00a86b; --secondary: #f4a261; --dark: #1a1a1a; --light: #f4f4f4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        nav { background: var(--dark); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; }
+        
+        .container { padding: 50px 20px; max-width: 1200px; margin: auto; }
+        .brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .brand-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; text-align: center; }
+        .brand-card:hover { transform: translateY(-10px); }
+        .brand-card img { width: 100%; height: 250px; object-fit: cover; }
+        .brand-card h3 { padding: 20px; color: var(--primary); font-size: 1.5rem; }
+        .brand-card p { padding: 0 20px 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LIONDEW</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom: 40px; font-size: 2.5rem;">The LionDew Family</h2>
+        <div class="brand-grid">
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=60" alt="LionDew">
+                <h3>LionDew Original</h3>
+                <p>The citrus-cactus blend that started it all.</p>
+            </div>
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1527960669566-f882ba85a4c6?auto=format&fit=crop&w=500&q=60" alt="Solar Flare">
+                <h3>Solar Flare</h3>
+                <p>Intense tropical orange energy.</p>
+            </div>
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf76589fd8?auto=format&fit=crop&w=500&q=60" alt="Arctic Claw">
+                <h3>Arctic Claw</h3>
+                <p>A crisp, cool berry blast.</p>
+            </div>
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1544380904-c686aad2fc40?auto=format&fit=crop&w=500&q=60" alt="Jungle Pulse">
+                <h3>Jungle Pulse</h3>
+                <p>Natural kiwi-lime hydration.</p>
+            </div>
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500&q=60" alt="Desert Bloom">
+                <h3>Desert Bloom</h3>
+                <p>Sweet hibiscus with a kick.</p>
+            </div>
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&w=500&q=60" alt="Midnight Mane">
+                <h3>Midnight Mane</h3>
+                <p>Blackberry and dark cherry fusion.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

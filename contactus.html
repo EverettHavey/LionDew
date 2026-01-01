@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LionDew</title>
+    <style>
+        :root { --primary: #00a86b; --secondary: #f4a261; --dark: #1a1a1a; --light: #f4f4f4; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        nav { background: var(--dark); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; }
+        
+        .container { padding: 50px 20px; max-width: 600px; margin: auto; }
+        form { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        button { background: var(--primary); color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LIONDEW</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom: 30px;">Reach Out to the Pride</h2>
+        <form onsubmit="alert('Message Sent!'); return false;">
+            <div class="group">
+                <label>Name</label>
+                <input type="text" required>
+            </div>
+            <div class="group">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+            <div class="group">
+                <label>Message</label>
+                <textarea rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
